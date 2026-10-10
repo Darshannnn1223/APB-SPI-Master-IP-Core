@@ -1,0 +1,147 @@
+
+  -----------------------------------------------------------------------------
+  Report Summary
+  -----------------------------------------------------------------------------
+  Product Info
+    Name    : VC Static Master Shell
+    Version : X-2025.06 -- May 29, 2025
+
+  Report Info
+    Created : Sep 22, 2026  09:38:28
+
+    TopLevelModule: baud_rate_generator
+
+  -----------------------------------------------------------------------------
+  Management Summary
+  -----------------------------------------------------------------------------
+  Stage             Family      Fatals    Errors  Warnings     Infos
+  -----             --------  --------  --------  --------  --------
+  DESIGN_READ       DESIGN           0         0         1         0
+  LANGUAGE_CHECK    CODING           0         0         0         1
+  STRUCTURAL_CHECK  CODING           0         0         0         8
+  -----             --------  --------  --------  --------  --------
+  Total                              0         0         1         9
+
+
+  -----------------------------------------------------------------------------
+  Tree Summary
+  -----------------------------------------------------------------------------
+  Severity  Stage             Tag                  Count
+  --------  -----             -------------------  -----
+  warning   DESIGN_READ       DB_CANT_LOAD             1
+  info      LANGUAGE_CHECK    ReportPortInfo-ML        1
+  info      STRUCTURAL_CHECK  RegInputOutput-ML        8
+  --------  -----             -------------------  -----
+  Total                                               10
+
+
+
+  -----------------------------------------------------------------------------
+  DB_CANT_LOAD  (1 warning/0 waived)
+  -----------------------------------------------------------------------------
+  Tag            : DB_CANT_LOAD
+  Violation      : DESIGN:1
+  MessageContent : Invalid link library file specified. Cannot load link library './/'
+
+
+  -----------------------------------------------------------------------------
+  RegInputOutput-ML  (8 infos/0 waived)
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:1
+  Goal                : lint_rtl
+  FileName            : ./../rtl/baudrate.v
+  LineNumber          : 27
+  Statement           : 				else if(((spi_mode==2'b01 && !spiswai) || (spi_mode==2'b00)) && !ss_n)  
+  Signal              : spiswai
+  Module              : baud_rate_generator
+  DesignObjHierarchy  : baud_rate_generator
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:2
+  Goal                : lint_rtl
+  FileName            : ./../rtl/baudrate.v
+  LineNumber          : 31
+  Statement           : 						sclk<=~sclk;
+  Signal              : cpol
+  Module              : baud_rate_generator
+  DesignObjHierarchy  : baud_rate_generator
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:3
+  Goal                : lint_rtl
+  FileName            : ./../rtl/baudrate.v
+  LineNumber          : 59
+  Statement           : 				if((cpol && !cpha)||(!cpol && cpha))
+  Signal              : cpha
+  Module              : baud_rate_generator
+  DesignObjHierarchy  : baud_rate_generator
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:4
+  Goal                : lint_rtl
+  FileName            : ./../rtl/baudrate.v
+  LineNumber          : 27
+  Statement           : 				else if(((spi_mode==2'b01 && !spiswai) || (spi_mode==2'b00)) && !ss_n)  
+  Signal              : ss_n
+  Module              : baud_rate_generator
+  DesignObjHierarchy  : baud_rate_generator
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:5
+  Goal                : lint_rtl
+  FileName            : ./../rtl/baudrate.v
+  LineNumber          : 16
+  Statement           : 			assign baudratedivisor = (sppr+1)*2**(spr+1);
+  Signal              : spr[2:0]
+  Module              : baud_rate_generator
+  DesignObjHierarchy  : baud_rate_generator
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:6
+  Goal                : lint_rtl
+  FileName            : ./../rtl/baudrate.v
+  LineNumber          : 11
+  Statement           : 			output [11:0]baudratedivisor;
+  Signal              : baudratedivisor[11:0]
+  Module              : baud_rate_generator
+  DesignObjHierarchy  : baud_rate_generator
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:7
+  Goal                : lint_rtl
+  FileName            : ./../rtl/baudrate.v
+  LineNumber          : 16
+  Statement           : 			assign baudratedivisor = (sppr+1)*2**(spr+1);
+  Signal              : sppr[2:0]
+  Module              : baud_rate_generator
+  DesignObjHierarchy  : baud_rate_generator
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:8
+  Goal                : lint_rtl
+  FileName            : ./../rtl/baudrate.v
+  LineNumber          : 27
+  Statement           : 				else if(((spi_mode==2'b01 && !spiswai) || (spi_mode==2'b00)) && !ss_n)  
+  Signal              : spi_mode[1:0]
+  Module              : baud_rate_generator
+  DesignObjHierarchy  : baud_rate_generator
+
+  -----------------------------------------------------------------------------
+  ReportPortInfo-ML  (1 info/0 waived)
+  -----------------------------------------------------------------------------
+  Tag           : ReportPortInfo-ML
+  Description   : Port Information for top design unit has been generated. For details see report ReportPortInfo.rpt
+  Violation     : Lint:9
+  Goal          : lint_rtl
+  FileName      : /home2/B134/DarshaN/VLSI_RN_OFFLINE/SPI_Project/lint/vcst_rtdb/.internal/spyglass/vc_lint0/baud_rate_generator/VC_GOAL0/spyglass_reports/morelint/ReportPortInfo
+  LineNumber    : 1
+  Statement     : #     Comment          : Report Top Level Module Port Info
