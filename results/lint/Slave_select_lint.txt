@@ -1,0 +1,106 @@
+
+  -----------------------------------------------------------------------------
+  Report Summary
+  -----------------------------------------------------------------------------
+  Product Info
+    Name    : VC Static Master Shell
+    Version : X-2025.06 -- May 29, 2025
+
+  Report Info
+    Created : Sep 28, 2026  08:35:32
+
+    TopLevelModule: slave_block
+
+  -----------------------------------------------------------------------------
+  Management Summary
+  -----------------------------------------------------------------------------
+  Stage             Family      Fatals    Errors  Warnings     Infos
+  -----             --------  --------  --------  --------  --------
+  DESIGN_READ       DESIGN           0         0         0         0
+  LANGUAGE_CHECK    CODING           0         0         0         1
+  STRUCTURAL_CHECK  CODING           0         0         0         5
+  -----             --------  --------  --------  --------  --------
+  Total                              0         0         0         6
+
+
+  -----------------------------------------------------------------------------
+  Tree Summary
+  -----------------------------------------------------------------------------
+  Severity  Stage             Tag                  Count
+  --------  -----             -------------------  -----
+  warning   DESIGN_READ       DB_CANT_LOAD             1
+  info      LANGUAGE_CHECK    ReportPortInfo-ML        1
+  info      STRUCTURAL_CHECK  RegInputOutput-ML        5
+  --------  -----             -------------------  -----
+  Total                                                7
+
+
+
+  -----------------------------------------------------------------------------
+  RegInputOutput-ML  (5 infos/0 waived)
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:1
+  Goal                : lint_rtl
+  FileName            : ./../rtl/slave_block.v
+  LineNumber          : 24
+  Statement           : 	if((spi_mode == 2'b00 || (spi_mode == 2'b01 && !spiswai))&& mstr) begin
+  Signal              : mstr
+  Module              : slave_block
+  DesignObjHierarchy  : slave_block
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:2
+  Goal                : lint_rtl
+  FileName            : ./../rtl/slave_block.v
+  LineNumber          : 24
+  Statement           : 	if((spi_mode == 2'b00 || (spi_mode == 2'b01 && !spiswai))&& mstr) begin
+  Signal              : spiswai
+  Module              : slave_block
+  DesignObjHierarchy  : slave_block
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:3
+  Goal                : lint_rtl
+  FileName            : ./../rtl/slave_block.v
+  LineNumber          : 30
+  Statement           : 		rcv <= 1;
+  Signal              : send_data
+  Module              : slave_block
+  DesignObjHierarchy  : slave_block
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:4
+  Goal                : lint_rtl
+  FileName            : ./../rtl/slave_block.v
+  LineNumber          : 13
+  Statement           : assign target = baudratedivisor*8;
+  Signal              : baudratedivisor[11:0]
+  Module              : slave_block
+  DesignObjHierarchy  : slave_block
+  -----------------------------------------------------------------------------
+  Tag                 : RegInputOutput-ML
+  Description         : Port '[Signal]' is not registered [Hierarchy: '[DesignObjHierarchy]']
+  Violation           : Lint:5
+  Goal                : lint_rtl
+  FileName            : ./../rtl/slave_block.v
+  LineNumber          : 24
+  Statement           : 	if((spi_mode == 2'b00 || (spi_mode == 2'b01 && !spiswai))&& mstr) begin
+  Signal              : spi_mode[1:0]
+  Module              : slave_block
+  DesignObjHierarchy  : slave_block
+
+  -----------------------------------------------------------------------------
+  ReportPortInfo-ML  (1 info/0 waived)
+  -----------------------------------------------------------------------------
+  Tag           : ReportPortInfo-ML
+  Description   : Port Information for top design unit has been generated. For details see report ReportPortInfo.rpt
+  Violation     : Lint:6
+  Goal          : lint_rtl
+  FileName      : /home2/B134/DarshaN/VLSI_RN_OFFLINE/SPI_Project/lint/vcst_rtdb/.internal/spyglass/vc_lint0/slave_block/VC_GOAL0/spyglass_reports/morelint/ReportPortInfo
+  LineNumber    : 1
+  Statement     : #     Comment          : Report Top Level Module Port Info
